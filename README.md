@@ -1,29 +1,18 @@
-💰 Personal Finance Tracker
+Personal Finance Tracker
+Project Description
 
-Spring Boot + React (Vite) + PostgreSQL
+Personal Finance Tracker is a full-stack web application developed to help users manage their daily expenses easily.
+The application allows users to add, view, update, and delete expenses.
+All expense data is stored securely in a database and displayed instantly on the user interface along with a visual chart.
 
-A full-stack web application to track daily expenses, visualize spending trends, and manage personal finances efficiently.
+This project uses Spring Boot for backend development and React for frontend development.
 
-🚀 Features
+![Project Screenshot](images/dashboard.png)
 
-➕ Add daily expenses (description, amount, date)
-
-📋 View all expenses in a tabular format
-
-🔄 Update & delete expenses
-
-📊 Real-time expense visualization using charts
-
-💾 Data persistence with PostgreSQL
-
-⚡ Fast frontend using React + Vite
-
-🌐 RESTful API with Spring Boot
-
-🛠️ Tech Stack
+Technologies Used
 Backend
 
-Java 21
+Java
 
 Spring Boot
 
@@ -31,155 +20,78 @@ Spring Data JPA
 
 PostgreSQL
 
-Maven
-
 Frontend
 
-React 18
+React
 
 Vite
 
 Axios
 
-Chart.js / react-chartjs-2
-
-Tailwind CSS (for styling)
-
-📂 Project Structure
-personal-finance-tracker/
-│
-├── backend/
-│   ├── src/main/java/com/example/finance_tracker
-│   ├── controller
-│   ├── service
-│   ├── repository
-│   ├── model
-│   └── application.properties
-│
-├── frontend/
-│   ├── src
-│   │   ├── components
-│   │   ├── pages
-│   │   ├── services
-│   │   ├── App.jsx
-│   │   └── main.jsx
-│   ├── index.html
-│   └── vite.config.js
-│
-└── README.md
-
-⚙️ Backend Setup (Spring Boot)
-
-1️⃣ Open backend folder
-
-cd backend
+Chart.js
 
 
-2️⃣ Configure PostgreSQL in application.properties
+Project Working
+1. Add Expense
 
-spring.datasource.url=jdbc:postgresql://localhost:5432/finance_tracker
-spring.datasource.username=postgres
-spring.datasource.password=your_password
+User enters:
 
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
+Description
+
+Amount
+
+Date
+
+On clicking Add Expense, data is sent to backend.
+
+Backend saves the data in PostgreSQL database.
+
+2. View Expenses
+
+All saved expenses are fetched from the backend.
+
+Expenses are displayed in a table showing:
+
+Date
+
+Amount
+
+Description
+
+Action buttons
+
+3. Update Expense
+
+User can edit an existing expense.
+
+Updated data is sent to backend and saved.
+
+UI refreshes instantly.
+
+4. Delete Expense
+
+User can delete an expense.
+
+Backend removes the record from database.
+
+UI updates automatically.
+
+5. Expense Chart
+
+A line chart shows expenses over time.
+
+Chart updates automatically whenever data changes.
+
+Application Flow
+
+Frontend sends request using Axios
+
+Spring Boot backend processes request
+
+Data is stored or retrieved from PostgreSQL
+
+Response is sent back to frontend
+
+UI updates instantly with table and chart
 
 
-3️⃣ Run the backend
-
-mvn spring-boot:run
-
-
-Backend runs on:
-
-http://localhost:8081
-
-⚙️ Frontend Setup (React + Vite)
-
-1️⃣ Open frontend folder
-
-cd frontend
-
-
-2️⃣ Install dependencies
-
-npm install
-
-
-3️⃣ Start frontend
-
-npm run dev
-
-
-Frontend runs on:
-
-http://localhost:5173
-
-
-(or next available port)
-
-🔗 API Endpoints
-Method	Endpoint	Description
-GET	/api/expenses	Get all expenses
-POST	/api/expenses	Add new expense
-PUT	/api/expenses/{id}	Update expense
-DELETE	/api/expenses/{id}	Delete expense
-📊 Live Expense Chart
-
-Expenses update instantly after adding
-
-Line chart shows spending over time
-
-Chart data synced with backend
-
-🧪 Sample Expense JSON
-{
-  "description": "Tea",
-  "amount": 20,
-  "date": "2025-12-29"
-}
-
-🧠 Learning Outcomes
-
-Full-stack integration (React + Spring Boot)
-
-REST API design
-
-State management in React
-
-Chart visualization
-
-PostgreSQL database handling
-
-Real-world CRUD operations
-
-👨‍💻 Author
-
-Praveen S
-GitHub: Praveen-S-24
-
-📌 Future Enhancements
-
-Category-wise expenses
-
-Monthly summary
-
-Authentication (Login/Register)
-
-Export to Excel/PDF
-
-Dark mode
-
-⭐ If you like this project, give it a star on GitHub!
-
-If you want, next I can:
-
-✨ Improve UI (premium look)
-
-🎤 Give viva explanation
-
-📄 Create project report PDF
-
-🧠 Explain code line-by-line
-
-Just tell me 👍
