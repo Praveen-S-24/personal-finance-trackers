@@ -5,6 +5,9 @@ Personal Finance Tracker is a full-stack web application developed to help users
 The application allows users to add, view, update, and delete expenses.
 All expense data is stored securely in a database and displayed instantly on the user interface along with a visual chart.
 
+![Personal Finance Tracker Dashboard](images/dashboard.png)
+
+
 This project uses Spring Boot for backend development and React for frontend development.
 
 
